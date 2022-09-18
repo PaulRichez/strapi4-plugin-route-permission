@@ -1,5 +1,5 @@
 {
-  "name": "strapi-route-permission",
+  "name": "strapi-plugin-route-permission",
   "version": "1.0.0",
   "description": "A plugin for Strapi V4 that provides the ability to config roles on route for genrate permissions",
   "strapi": {
