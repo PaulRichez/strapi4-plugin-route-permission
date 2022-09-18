@@ -1,10 +1,10 @@
 # Strapi4 plugin route-permission
 Inspired from [strapi-plugin-route-permission](https://github.com/andreciornavei/strapi-plugin-route-permission), same plugin but for strapi V3.
 
-A plugin for [Strapi](https://github.com/strapi/strapi) that provides the ability to config roles on route for genrate permissions.
+A plugin for [Strapi](https://github.com/strapi/strapi) that provides the ability to config roles on route for generate permissions.
 
-[![Downloads](https://img.shields.io/npm/dm/strapi4-plugin-route-permission?style=for-the-badge)](https://img.shields.io/npm/dm/strapi4-plugin-route-permission?style=for-the-badge)
-[![Install size](https://img.shields.io/npm/l/strapi4-plugin-route-permission?style=for-the-badge)](https://img.shields.io/npm/l/strapi4-plugin-route-permission?style=for-the-badge)
+[![Downloads](https://img.shields.io/npm/dm/strapi4-plugin-route-permission?style=for-the-badge)](https://www.npmjs.com/package/strapi4-plugin-route-permission)
+[![Install size](https://img.shields.io/npm/l/strapi4-plugin-route-permission?style=for-the-badge)](https://www.npmjs.com/package/strapi4-plugin-route-permission)
 
 ## 🚀 &nbsp; _Overview_
 
