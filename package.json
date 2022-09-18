@@ -1,25 +1,35 @@
 {
   "name": "route-permission",
   "version": "0.0.0",
-  "description": "This is the description of the plugin.",
+  "description": "A plugin for Strapi V4 that provides the ability to config roles on route for genrate permissions",
   "strapi": {
     "name": "route-permission",
-    "description": "Description of Route Permission plugin",
+    "description": "A plugin for Strapi v4 that provides the ability to config roles on route for genrate permissions",
     "kind": "plugin",
     "displayName": "Route Permission"
   },
   "dependencies": {},
   "author": {
-    "name": "A Strapi developer"
+    "name": "Paul Richez",
+    "url": "https://github.com/PaulRichez"
   },
   "maintainers": [
     {
-      "name": "A Strapi developer"
+      "name": "Paul Richez",
+      "url": "https://github.com/PaulRichez"
     }
   ],
   "engines": {
     "node": ">=14.19.1 <=16.x.x",
     "npm": ">=6.0.0"
   },
+  "keywords": [
+		"strapi",
+		"strapi-plugin",
+		"plugin",
+		"strapi plugin",
+		"route-permission",
+		"config route permission"
+	],
   "license": "MIT"
 }
