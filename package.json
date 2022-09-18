@@ -31,5 +31,9 @@
 		"route-permission",
 		"config route permission"
 	],
+  "peerDependencies": {
+		"@strapi/strapi": "^4.3.6",
+		"lodash": "^4.17.21"
+	},
   "license": "MIT"
 }
