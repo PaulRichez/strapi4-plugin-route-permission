@@ -1,6 +1,17 @@
 'use strict';
 const _ = require('lodash');
 
+const transformRoute = (route, type, name  ) => {
+  const [controller, action] = _.get(route, "handler").split(".")
+  return {
+    type,
+    name,
+    controller,
+    action,
+    roles: route.config.roles,
+  }
+}
+
 module.exports = ({ strapi }) => ({
   getRoutesWithRolesConfigured() {
     const routes = [];
@@ -9,15 +20,9 @@ module.exports = ({ strapi }) => ({
       const api = strapi.api[apiName];
       _.forEach(api.routes, router => {
         router.routes.forEach((route) => {
-          const [controller, action] = _.get(route, "handler").split(".")
           if (route?.config?.roles) {
-            routes.push({
-              type: 'api',
-              name: apiName,
-              controller,
-              action,
-              roles: route.config.roles,
-            });
+            const result = transformRoute(route, 'api', apiName)
+            routes.push(result);
           }
         })
       })
@@ -28,14 +33,8 @@ module.exports = ({ strapi }) => ({
       _.forEach(plugin.routes, router => {
         router.routes.forEach((route) => {
           if (route?.config?.roles) {
-            const [controller, action] = _.get(route, "handler").split(".")
-            routes.push({
-              type: 'plugin',
-              name: pluginName,
-              controller,
-              action,
-              roles: route.config.roles,
-            });
+            const result = transformRoute(route, 'plugin', pluginName)
+            routes.push(result);
           }
         })
       })
