@@ -94,13 +94,13 @@ module.exports = {
 };
 ```
 
-### Result:
+## 🎉 &nbsp; _Result_
 
 On strapi startup it add every permission configured in your route config (no remove)
 
 ![](./docs/console.png)
 ![](./docs/result.png)
 
-## Bugs
+## 🐛 &nbsp; _Bugs_
 
 If any bugs are found please report them as a [Github Issue](https://github.com/PaulRichez/strapi4-plugin-route-permission/issues)
