@@ -2,7 +2,12 @@
 const _ = require('lodash');
 
 const transformRoute = (route, type, name  ) => {
-  const [controller, action] = _.get(route, "handler").split(".")
+  var [controller, action] = _.get(route, "handler").split(".")
+  if (route.handler.includes('::')) {
+    // for config on core route
+    controller = controller.split('::')[1]
+    action = route.handler.split('.').pop();
+  }
   return {
     type,
     name,
