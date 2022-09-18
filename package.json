@@ -19,21 +19,26 @@
       "url": "https://github.com/PaulRichez"
     }
   ],
+  "homepage": "https://github.com/PaulRichez/strapi4-plugin-route-permission#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PaulRichez/strapi4-plugin-route-permission"
+  },
+  "keywords": [
+    "strapi",
+    "strapi-plugin",
+    "plugin",
+    "strapi plugin",
+    "route-permission",
+    "config route permission"
+  ],
   "engines": {
     "node": ">=14.19.1 <=16.x.x",
     "npm": ">=6.0.0"
   },
-  "keywords": [
-		"strapi",
-		"strapi-plugin",
-		"plugin",
-		"strapi plugin",
-		"route-permission",
-		"config route permission"
-	],
   "peerDependencies": {
-		"@strapi/strapi": "^4.3.6",
-		"lodash": "^4.17.21"
-	},
+    "@strapi/strapi": "^4.3.6",
+    "lodash": "^4.17.21"
+  },
   "license": "MIT"
 }
