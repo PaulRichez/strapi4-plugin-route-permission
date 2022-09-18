@@ -95,7 +95,11 @@ module.exports = {
 ```
 
 ### Result:
+
 On strapi startup it add every permission configured in your route config (no remove)
+
+![](./docs/console.png)
+![](./docs/result.png)
 
 ## Bugs
 
