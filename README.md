@@ -18,12 +18,12 @@ This plugin implements a simple way to seed strapi users-permissions from routes
 
 With npm:
 ```bash
-npm install strapi4-plugin-route-permission
+npm install strapi-plugin-server-route-permission
 ```
 
 With yarn:
 ```bash
-yarn add strapi4-plugin-route-permission
+yarn add strapi-plugin-server-route-permission
 ```
 
 ---
