@@ -1,14 +1,16 @@
-# Strapi4 plugin route-permission
+# Strapi4 plugin server route permission
 Inspired from [strapi-plugin-route-permission](https://github.com/andreciornavei/strapi-plugin-route-permission), same plugin but for strapi V3.
 
-A plugin for [Strapi](https://github.com/strapi/strapi) that provides the ability to config roles on route for generate permissions.
+A plugin for [Strapi](https://github.com/strapi/strapi) that provides the ability to config roles on server route for generate permissions.
 
-[![Downloads](https://img.shields.io/npm/dm/strapi4-plugin-route-permission?style=for-the-badge)](https://www.npmjs.com/package/strapi4-plugin-route-permission)
-[![Install size](https://img.shields.io/npm/l/strapi4-plugin-route-permission?style=for-the-badge)](https://www.npmjs.com/package/strapi4-plugin-route-permission)
+[![Downloads](https://img.shields.io/npm/dm/strapi-plugin-server-route-permission?style=for-the-badge)](https://www.npmjs.com/package/strapi-plugin-server-route-permission)
+[![Install size](https://img.shields.io/npm/l/strapi-plugin-server-route-permission?style=for-the-badge)](https://github.com/PaulRichez/strapi4-plugin-route-permission/blob/main/Licence)
 
 ## 🚀 &nbsp; _Overview_
 
-This plugin implements a simple way to seed strapi users-permissions from routes configuration. It means that you can define your routes permissions direcly on route files. So every time your server ups, it will recreate yours routes permissions from your route config, allowing you to migrate your application without worrying about redefine your routes permissions over strapi panel.
+This plugin implements a simple way to seed strapi users-permissions from routes configuration (only server). It means that you can define your routes permissions direcly on route files. So every time your server ups, it will recreate yours routes permissions from your route config, allowing you to migrate your application without worrying about redefine your routes permissions over strapi panel.
+
+⚠️ **this plugin create route permission but don't delete any route permission**
 
 ---
 
