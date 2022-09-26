@@ -12,14 +12,14 @@ module.exports = async ({ strapi }) => {
       const selectedRole = roles.find(r => r.type === role);
       if (selectedRole) {
         const action = `${route.type}::${route.name}.${route.controller}.${route.action}`;
-        const perm = selectedRole.permissions.find(p => p.action === action);
-        if (!perm) {
+        // permission no found
+        if (!selectedRole.permissions.find(p => p.action === action)) {
           console.log(`generating permission on role ${role} ::::: ${action}`)
           counterPermUpdated++;
           return await strapi.entityService.create('plugin::users-permissions.permission', {
             data: {
               action,
-              role,
+              role: selectedRole,
             },
           });
         }
