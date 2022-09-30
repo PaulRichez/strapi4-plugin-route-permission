@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "route_permissions",
+  "info": {
+    "singularName": "route-permission",
+    "pluralName": "route-permissions",
+    "displayName": "route-permission"
+  },
+  "options": {
+    "draftAndPublish": false,
+    "comment": ""
+  },
+  "pluginOptions": {
+    "content-manager": {
+      "visible": true
+    },
+    "content-type-builder": {
+      "visible": true
+    }
+  },
+  "attributes": {
+    "action": {
+      "type": "string",
+      "configurable": false
+    },
+    "role": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.role",
+      "configurable": false
+    }
+  }
+}

@@ -98,10 +98,13 @@ module.exports = {
 
 ## 🎉 &nbsp; _Result_
 
-On strapi startup it add every permission configured in your route config (no remove)
+On strapi startup it add every permission configured in your route config
 
 ![](./docs/console.png)
 ![](./docs/result.png)
+
+if admin remove a permission from admin panel, you got the log and the route is'nt configured
+![](./docs/result_removed_by_admin.png)
 
 ## 🐛 &nbsp; _Bugs_
 
