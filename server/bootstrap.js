@@ -5,6 +5,7 @@ module.exports = async ({ strapi }) => {
   const routes = strapi.service('plugin::route-permission.routes').getRoutesWithRolesConfigured();
   // get Roles with permissions
   const roles = await strapi.entityService.findMany('plugin::users-permissions.role', { populate: ['permissions'] });
+  // get routes in db
   const prevsRouteConfig = await strapi.entityService.findMany('plugin::route-permission.route-permission', { populate: ['role'] })
   // generate permisison route/role
   var counterPermUpdated = 0;
@@ -12,24 +13,23 @@ module.exports = async ({ strapi }) => {
     return await route.roles.forEach(async (role) => {
       const selectedRole = roles.find(r => r.type === role);
       if (selectedRole) {
-        const action = `${route.type}::${route.name}.${route.controller}.${route.action}`;
         // permission no found
-        if (!selectedRole.permissions.find(p => p.action === action)) {
-          if (prevsRouteConfig.find(r => r.action === action && r.role.id === selectedRole.id)) {
-            console.log(`Permission on role ${role} ::::: ${action} was removed from admin`)
+        if (!selectedRole.permissions.find(p => p.action === route.perm_action)) {
+          if (prevsRouteConfig.find(r => r.action === route.perm_action && r.role.id === selectedRole.id)) {
+            console.log(`Permission on role ${role} ::::: ${route.perm_action} was removed from admin`)
             return null;
           } else {
-            console.log(`Generating permission on role ${role} ::::: ${action}`)
+            console.log(`Generating permission on role ${role} ::::: ${route.perm_action}`)
             counterPermUpdated++;
             await strapi.entityService.create('plugin::route-permission.route-permission', {
               data: {
-                action,
+                action: route.perm_action,
                 role: selectedRole,
               },
             });
             return await strapi.entityService.create('plugin::users-permissions.permission', {
               data: {
-                action,
+                action: route.perm_action,
                 role: selectedRole,
               },
             });

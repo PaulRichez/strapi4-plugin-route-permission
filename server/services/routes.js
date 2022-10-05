@@ -8,11 +8,13 @@ const transformRoute = (route, type, name) => {
     controller = controller.split('::')[1]
     action = route.handler.split('.').pop();
   }
+  const perm_action = `${type}::${name}.${controller}.${action}`;
   return {
     type,
     name,
     controller,
     action,
+    perm_action,
     roles: route.config.roles,
   }
 }
