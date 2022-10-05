@@ -1,5 +1,11 @@
 {
     "plugin.name": "Permission dossiers",
     "plugin.section": "Plugin vérouillage de dossier",
-    "plugin.section.item": "Configuration"
+    "plugin.section.item": "Configuration",
+    "page.homePage.table.header.role": "Rôle",
+    "page.homePage.table.header.permission": "Permission",
+    "page.homePage.table.header.status": "Statut",
+    "status-icon.tooltip.status.1": "Permission activé",
+    "status-icon.tooltip.status.2": "Permission désactivé depuis le panel admin",
+    "status-icon.tooltip.status.3": "Ce rôle n'existe pas"
 }
