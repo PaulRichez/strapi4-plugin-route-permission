@@ -113,7 +113,7 @@ module.exports = {
 
 ## 🎉 &nbsp; _Result_
 
-On strapi startup it add every permission configured in your route config
+On strapi startup it add only new permission configured in your route config
 
 ![](./docs/console.png)
 ![](./docs/result.png)

@@ -1,6 +1,6 @@
 {
-    "plugin.name": "Permission dossiers",
-    "plugin.section": "Plugin vérouillage de dossier",
+    "plugin.name": "Permissions routes",
+    "plugin.section": "Plugin permisisons routes",
     "plugin.section.item": "Configuration",
     "page.homePage.header.count": "routes configurées",
     "page.homePage.table.header.role": "Rôle",
@@ -8,5 +8,17 @@
     "page.homePage.table.header.status": "Statut",
     "status-icon.tooltip.status.1": "Permission activé",
     "status-icon.tooltip.status.2": "Permission désactivé depuis le panel admin",
-    "status-icon.tooltip.status.3": "Ce rôle n'existe pas"
+    "status-icon.tooltip.status.3": "Ce rôle n'existe pas",
+    "page.settings.deletedHistory": "L'historique des routes configurées supprimés",
+    "page.settings.title": "Paramètres permissions routes configurées",
+    "page.settings.actions.restore": "Restaurer les routes configurées",
+    "page.settings.section.restore": "Restaurer les routes configurées",
+    "page.settings.section.restore.subtitle": "Supprime l'historisation des routes configurées, au prochain redémarrage, les permissions seront remise via les routes configurées",
+    "page.settings.actions.restore.confirmation.header": "Restaurer",
+    "page.settings.actions.restore.confirmation.button.confirm": "Oui",
+    "page.settings.actions.restore.confirmation.button.cancel": "Annuler",
+    "page.settings.actions.restore.confirmation.description": "En restaurant les données, au prochain redémarrage, toutes les permissions seront reconfigurées",
+    "page.settings.notification.restore": "L'historique des routes configurées avec permissions supprimée",
+    "compontents.confirmation.dialog.button.confirm" : "Oui",
+    "compontents.confirmation.dialog.button.cancel" : "Annuler"
 }

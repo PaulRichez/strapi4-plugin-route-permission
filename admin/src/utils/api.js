@@ -6,4 +6,8 @@ export const apiRoutesPermission = {
             }`);
         return data;
     },
+    deleteConfiguratedRoutesHistory: async () => {
+        const data = await axios.delete(`/route-permission/configured-routes-history`);
+        return data;
+    }
 };

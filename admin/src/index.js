@@ -28,6 +28,35 @@ export default {
         // },
       ],
     });
+
+    app.createSettingSection(
+      {
+        id: pluginId,
+        intlLabel: {
+          id: `${pluginId}.plugin.section`,
+          defaultMessage: `Route permission plugin`,
+        },
+      },
+      [
+        {
+          intlLabel: {
+            id: `${pluginId}.plugin.section.item`,
+            defaultMessage: "Configuration",
+          },
+          id: "comments",
+          to: `/settings/${pluginId}`,
+          Component: async () => {
+            const component = await import(
+              /* webpackChunkName: "documentation-settings" */ "./pages/Settings"
+            );
+
+            return component;
+          },
+          permissions: []
+        },
+      ]
+    );
+
     app.registerPlugin({
       id: pluginId,
       initializer: Initializer,
@@ -36,7 +65,7 @@ export default {
     });
   },
 
-  bootstrap(app) {},
+  bootstrap(app) { },
   async registerTrads({ locales }) {
     const importedTrads = await Promise.all(
       locales.map((locale) => {
