@@ -32,12 +32,23 @@ module.exports = {
         }
       });
     });
+    const total = configuredRoutes.length;
     if (ctx.query.sort) {
       configuredRoutes = _.orderBy(configuredRoutes, [ctx.query.sort.split(':')[0]], [ctx.query.sort.split(':')[1].toLowerCase()]);
     }
+    if (ctx.query.page) {
+      const pageSize = ctx.query.pageSize || 10;
+      const start = pageSize * (ctx.query.page - 1);
+      const end = Number(start) + pageSize;
+      console.log(start, end)
+      configuredRoutes = configuredRoutes.splice(start, end)
+    }
     ctx.body = {
-      result: configuredRoutes, meta: {
-        total: configuredRoutes.length
+      result: configuredRoutes, pagination: {
+        total,
+        page: ctx.query.page || 1,
+        pageSize: ctx.query.pageSize || 10,
+        pageCount: Math.ceil(total / (ctx.query.pageSize || 10))
       }
     };
   },

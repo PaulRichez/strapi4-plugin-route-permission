@@ -14,6 +14,8 @@ import { apiRoutesPermission } from "../../utils/api";
 
 import StatusIcon from "../../components/status-icon";
 import TableHead from "../../components/TableHead"
+import TablePagination from "../../components/TablePagination"
+
 import { Box } from "@strapi/design-system/Box";
 import {
   Layout,
@@ -59,7 +61,7 @@ const HomePage = () => {
         <>
           <HeaderLayout
             title={formatMessage({ id: getTrad('plugin.name') })}
-            subtitle={`${data.data.meta.total} ${formatMessage({
+            subtitle={`${data.data.pagination.total} ${formatMessage({
               id: getTrad(
                 "page.homePage.header.count"
               )
@@ -88,6 +90,9 @@ const HomePage = () => {
               )}
             </Tbody>
           </Table>
+          <TablePagination
+            pagination={{ pageCount: data.data.pagination.pageCount || 1 }}
+          />
         </ContentLayout>
       </Layout>
     </Box>
