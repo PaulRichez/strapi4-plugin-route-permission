@@ -38,8 +38,10 @@ Core route example :
 ```js
 'use strict';
 
+'use strict';
+
 /**
- * restaurant router.
+ * restaurant router
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
@@ -47,10 +49,23 @@ const { createCoreRouter } = require('@strapi/strapi').factories;
 module.exports = createCoreRouter('api::restaurant.restaurant', {
     config: {
         find: {
-            roles: ["authenticated"],
+            roles: ["authenticated", "public"],
+        },
+        create: {
+            roles: ["authenticated"]
+        },
+        findOne: {
+            roles: ["authenticated", "public", "test"]
+        },
+        update: {
+            roles: ["authenticated"]
+        },
+        delete: {
+            roles: ["authenticated"]
         }
     }
 });
+
 ```
 
 custom route :
@@ -102,6 +117,8 @@ On strapi startup it add every permission configured in your route config
 
 ![](./docs/console.png)
 ![](./docs/result.png)
+
+Configurated routes are visible on admin panel :
 ![](./docs/admin.png)
 
 if admin remove a permission from admin panel, you got the log and the route is'nt configured
