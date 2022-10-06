@@ -1,10 +1,11 @@
 'use strict';
+const _ = require('lodash');
 
 module.exports = {
   async getConfiguredRoutes(ctx, next) {
     const routes = await strapi.service('plugin::route-permission.routes').getRoutesWithRolesConfigured();
     const roles = await strapi.entityService.findMany('plugin::users-permissions.role', { populate: ['permissions'] });
-    const configuredRoutes = [];
+    let configuredRoutes = [];
     await routes.forEach(async (route) => {
       return await route.roles.forEach(async (role) => {
         const selectedRole = roles.find(r => r.type === role);
@@ -31,6 +32,9 @@ module.exports = {
         }
       });
     });
+    if (ctx.query.sort) {
+      configuredRoutes = _.orderBy(configuredRoutes, [ctx.query.sort.split(':')[0]], [ctx.query.sort.split(':')[1].toLowerCase()]);
+    }
     ctx.body = {
       result: configuredRoutes, meta: {
         total: configuredRoutes.length

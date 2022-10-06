@@ -2,6 +2,7 @@
     "plugin.name": "Route Permission",
     "plugin.section": "Route permission plugin",
     "plugin.section.item": "Configuration",
+    "page.homePage.header.count": "configured routes",
     "page.homePage.table.header.role": "Role",
     "page.homePage.table.header.permission": "Permission",
     "page.homePage.table.header.status": "Status",

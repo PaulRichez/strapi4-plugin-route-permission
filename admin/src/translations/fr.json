@@ -2,6 +2,7 @@
     "plugin.name": "Permission dossiers",
     "plugin.section": "Plugin vérouillage de dossier",
     "plugin.section.item": "Configuration",
+    "page.homePage.header.count": "routes configurées",
     "page.homePage.table.header.role": "Rôle",
     "page.homePage.table.header.permission": "Permission",
     "page.homePage.table.header.status": "Statut",
