@@ -53,6 +53,7 @@ module.exports = {
     };
   },
   async deleteConfiguredRouteHistory(ctx, next) {
-    ctx.body = 'delete';
+    await strapi.service('plugin::route-permission.routes-permissions').deleteConfiguredRoutesHistory();
+    ctx.body = 'deleted';
   }
 };
