@@ -102,6 +102,7 @@ On strapi startup it add every permission configured in your route config
 
 ![](./docs/console.png)
 ![](./docs/result.png)
+![](./docs/admin.png)
 
 if admin remove a permission from admin panel, you got the log and the route is'nt configured
 ![](./docs/result_removed_by_admin.png)
