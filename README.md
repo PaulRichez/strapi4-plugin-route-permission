@@ -123,6 +123,12 @@ Configurated routes are visible on admin panel :
 
 if admin remove a permission from admin panel, you got the log and the route is'nt configured
 ![](./docs/result_removed_by_admin.png)
+![](./docs/role_deleted_admin.png)
+
+
+You can restore via settings on admin panel, this remove the configured routes history and reconfigure route which was deleted from the admin on next restart
+![](./docs/settings.png)
+![](./docs/restart_after_restore.png)
 
 ## 🐛 &nbsp; _Bugs_
 
