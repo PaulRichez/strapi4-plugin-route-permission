@@ -5,7 +5,7 @@ const transformRoute = (route, type, name) => {
   var [controller, action] = _.get(route, "handler").split(".")
   if (route.handler.includes('::')) {
     // for config on core route
-    controller = controller.split('::')[1]
+    controller = route.handler.split('::')[1].split('.')[1]
     action = route.handler.split('.').pop();
   }
   const perm_action = `${type}::${name}.${controller}.${action}`;
