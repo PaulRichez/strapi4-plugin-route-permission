@@ -1,6 +1,6 @@
 {
   "name": "strapi-plugin-server-route-permission",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "A plugin for Strapi V4 that provides the ability to config roles on route for genrate permissions",
   "strapi": {
     "name": "route-permission",
@@ -22,11 +22,11 @@
   "homepage": "https://github.com/PaulRichez/strapi4-plugin-route-permission#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/PaulRichez/strapi4-plugin-route-permission"
+    "url": "git+https://github.com/PaulRichez/strapi4-plugin-route-permission.git"
   },
   "bugs": {
-		"url": "https://github.com/PaulRichez/strapi4-plugin-route-permission/issues"
-	},
+    "url": "https://github.com/PaulRichez/strapi4-plugin-route-permission/issues"
+  },
   "keywords": [
     "strapi",
     "strapi-plugin",
