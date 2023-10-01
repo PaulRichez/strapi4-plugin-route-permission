@@ -50,6 +50,8 @@ const HomePage = () => {
   if (!queryParams) {
     setQuery({
       sort: 'permission:ASC',
+      pageSize: 10,
+      page: 1
     });
   }
   const { data, status } = useQuery(["get-configured-route", queryParams], () => apiRoutesPermission.getConfiguredRoutes(queryParams));
