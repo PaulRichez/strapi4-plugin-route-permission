@@ -29,7 +29,7 @@ const Settings = () => {
         setRestoreConfigmationVisible(false);
         toggleNotification({
             type: 'success',
-            message: formatMessage({ id: getTrad('settings.deletedHistory') })
+            message: formatMessage({ id: getTrad('settings.deletedHistory'), defaultMessage: "Configurated route history deleted" })
         });
     };
     const handleRestoreCancel = () => setRestoreConfigmationVisible(false);
@@ -45,7 +45,7 @@ const Settings = () => {
         <>
             <HeaderLayout
                 id="title"
-                title={formatMessage({ id: getTrad('page.settings.title') })}
+                title={formatMessage({ id: getTrad('page.settings.title'), defaultMessage: "Routes permissions settings" })}
                 subtitle=""
             ></HeaderLayout>
             <ContentLayout>
@@ -54,10 +54,10 @@ const Settings = () => {
                     <Stack size={4}>
                         <Stack size={2}>
                             <Typography variant="delta" as="h2">
-                                {formatMessage({ id: getTrad("page.settings.section.restore") })}
+                                {formatMessage({ id: getTrad("page.settings.section.restore"), defaultMessage: "Restore routes permisisons history" })}
                             </Typography>
                             <Typography variant="pi" as="h4">
-                                {formatMessage({ id: getTrad("page.settings.section.restore.subtitle") })}
+                                {formatMessage({ id: getTrad("page.settings.section.restore.subtitle"), defaultMessage: "Removes the history of the configured routes, on the next restart, the permissions will be reset with your route config" })}
                             </Typography>
                         </Stack>
                         <Grid gap={4}>
@@ -67,7 +67,7 @@ const Settings = () => {
                                     startIcon={<Refresh />}
                                     onClick={handleRestoreConfirmation}
                                 >
-                                    {formatMessage({ id: getTrad("page.settings.actions.restore") })}
+                                    {formatMessage({ id: getTrad("page.settings.actions.restore"), defaultMessage: "Restore routes permisisons history" })}
                                 </Button>
 
                                 <ConfirmationDialog
@@ -75,12 +75,14 @@ const Settings = () => {
                                     header={formatMessage({
                                         id: getTrad(
                                             "page.settings.actions.restore.confirmation.header"
-                                        )
+                                        ),
+                                        defaultMessage: "Restore default configuration"
                                     })}
                                     labelConfirm={formatMessage({
                                         id: getTrad(
                                             "page.settings.actions.restore.confirmation.button.confirm"
-                                        )
+                                        ),
+                                        defaultMessage: "Yes, I want to restore"
                                     })}
                                     iconConfirm={<Refresh />}
                                     onConfirm={handleRestoreConfiguration}
@@ -89,7 +91,8 @@ const Settings = () => {
                                     {formatMessage({
                                         id: getTrad(
                                             "page.settings.actions.restore.confirmation.description"
-                                        )
+                                        ),
+                                        defaultMessage: "By restoring the data, on the next reboot, all permissions will be reconfigured"
                                     })}
                                 </ConfirmationDialog>
                             </GridItem>

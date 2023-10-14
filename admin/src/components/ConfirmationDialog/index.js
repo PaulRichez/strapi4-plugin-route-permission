@@ -34,7 +34,7 @@ const ConfirmationDialog = ({
           <Flex justifyContent="center">
             <Typography id="dialog-confirm-description">
               {children ||
-                formatMessage({ id: getTrad("compontents.confirmation.dialog.description") })}
+                formatMessage({ id: getTrad("compontents.confirmation.dialog.description"), defaultMessage: "Are you sure you want to continue?" })}
             </Typography>
           </Flex>
         </Stack>

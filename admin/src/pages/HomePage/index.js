@@ -35,15 +35,15 @@ const HomePage = () => {
   const headers = [
     {
       name: 'permission',
-      metadatas: { sortable: true, label: formatMessage({ id: getTrad('page.homePage.table.header.permission') }) }
+      metadatas: { sortable: true, label: formatMessage({ id: getTrad('page.homePage.table.header.permission'), defaultMessage: "Permission" }) }
     },
     {
       name: 'role',
-      metadatas: { sortable: true, label: formatMessage({ id: getTrad('page.homePage.table.header.role') }) }
+      metadatas: { sortable: true, label: formatMessage({ id: getTrad('page.homePage.table.header.role'), defaultMessage: "Role" }) }
     },
     {
       name: 'status',
-      metadatas: { sortable: true, label: formatMessage({ id: getTrad('page.homePage.table.header.status') }) }
+      metadatas: { sortable: true, label: formatMessage({ id: getTrad('page.homePage.table.header.status'), defaultMessage: "Status" }) }
     },
   ]
   const COL_COUNT = headers.length;
@@ -62,11 +62,12 @@ const HomePage = () => {
       <Layout>
         <>
           <HeaderLayout
-            title={formatMessage({ id: getTrad('plugin.name') })}
+            title={formatMessage({ id: getTrad('plugin.name'), defaultMessage: 'Routes Permission' })}
             subtitle={`${data.data.pagination.total} ${formatMessage({
               id: getTrad(
                 "page.homePage.header.count"
-              )
+              ),
+              defaultMessage: "configured routes"
             })}`}
             as="h2"
           />
