@@ -1,6 +1,6 @@
 {
   "name": "strapi-plugin-server-route-permission",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "A plugin for Strapi V4 that provides the ability to config roles on route for genrate permissions",
   "strapi": {
     "name": "route-permission",
@@ -36,7 +36,7 @@
     "config route permission"
   ],
   "engines": {
-    "node": ">=14.19.1 <=18.x.x",
+    "node": ">=18.x.x",
     "npm": ">=6.0.0"
   },
   "peerDependencies": {
