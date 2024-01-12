@@ -40,7 +40,7 @@ module.exports = {
       const pageSize = ctx.query.pageSize || 10;
       const start = pageSize * (ctx.query.page - 1);
       const end = Number(start) + pageSize;
-      console.log(start, end)
+      strapi.log.info(start, end)
       configuredRoutes = configuredRoutes.splice(start, end)
     }
     ctx.body = {

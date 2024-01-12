@@ -16,10 +16,10 @@ module.exports = async ({ strapi }) => {
         // permission no found
         if (!selectedRole.permissions.find(p => p.action === route.perm_action)) {
           if (prevsRouteConfig.find(r => r.action === route.perm_action && r.role.id === selectedRole.id)) {
-            console.log(`Permission on role ${role} ::::: ${route.perm_action} was removed from admin`)
+            strapi.log.info(`Permission on role ${role} ::::: ${route.perm_action} was removed from admin`)
             return null;
           } else {
-            console.log(`Generating permission on role ${role} ::::: ${route.perm_action}`)
+            strapi.log.info(`Generating permission on role ${role} ::::: ${route.perm_action}`)
             counterPermUpdated++;
             await strapi.entityService.create('plugin::route-permission.route-permission', {
               data: {
@@ -38,5 +38,5 @@ module.exports = async ({ strapi }) => {
       }
     })
   }
-  console.log(`Route permission plugin ::::: ${counterPermUpdated} generated permissions `)
+  strapi.log.info(`Route permission plugin ::::: ${counterPermUpdated} generated permissions `)
 };
