@@ -122,6 +122,8 @@ module.exports = {
 };
 ```
 
+If you need for users-permissions plugin click [here](https://github.com/PaulRichez/strapi4-plugin-route-permission/tree/main/examples/plugin-users-permissions)
+
 ## 🎉 &nbsp; _Result_
 
 On strapi startup it add only new permission configured in your route config
