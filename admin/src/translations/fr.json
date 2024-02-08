@@ -19,6 +19,6 @@
     "page.settings.actions.restore.confirmation.button.cancel": "Annuler",
     "page.settings.actions.restore.confirmation.description": "En restaurant les données, au prochain redémarrage, toutes les permissions seront reconfigurées",
     "page.settings.notification.restore": "L'historique des routes configurées avec permissions supprimée",
-    "compontents.confirmation.dialog.button.confirm" : "Oui",
-    "compontents.confirmation.dialog.button.cancel" : "Annuler"
+    "components.confirmation.dialog.button.confirm" : "Oui",
+    "components.confirmation.dialog.button.cancel" : "Annuler"
 }

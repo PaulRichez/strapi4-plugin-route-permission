@@ -8,18 +8,17 @@
     "page.homePage.table.header.status": "Status",
     "status-icon.tooltip.status.1": "Permission enabled",
     "status-icon.tooltip.status.2": "Permission disabled from admin panel",
-    "status-icon.tooltip.status.3": "Role doen't exists",
+    "status-icon.tooltip.status.3": "Role doesn't exist",
     "page.settings.deletedHistory": "Configurated route history deleted",
     "page.settings.title": "Routes permissions settings",
-    "page.settings.actions.restore": "Restore routes permisisons history",
-    "page.settings.section.restore": "Restore routes permisisons history",
+    "page.settings.actions.restore": "Restore routes permissions history",
+    "page.settings.section.restore": "Restore routes permissions history",
     "page.settings.section.restore.subtitle": "Removes the history of the configured routes, on the next restart, the permissions will be reset with your route config",
     "page.settings.actions.restore.confirmation.header": "Restore default configuration",
     "page.settings.actions.restore.confirmation.button.confirm": "Yes, I want to restore",
     "page.settings.actions.restore.confirmation.button.cancel": "Cancel",
     "page.settings.actions.restore.confirmation.description": "By restoring the data, on the next reboot, all permissions will be reconfigured",
     "page.settings.notification.restore": "Configurated routes permissions history deleted",
-    "compontents.confirmation.dialog.button.confirm" : "Confirm",
-    "compontents.confirmation.dialog.button.cancel" : "cancel"
-
+    "components.confirmation.dialog.button.confirm" : "Confirm",
+    "components.confirmation.dialog.button.cancel" : "Cancel"
 }
