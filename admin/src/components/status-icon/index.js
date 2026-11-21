@@ -22,7 +22,7 @@ const StatusIcon = ({ status }) => {
         </Tooltip>
     )
     return (
-        <Tooltip description={formatMessage({ id: getTrad('status-icon.tooltip.status.3'), defaultMessage: "Role doen't exists" })}>
+        <Tooltip description={formatMessage({ id: getTrad('status-icon.tooltip.status.3'), defaultMessage: "Role doesn't exist" })}>
             <Icon width={`${25 / 16}rem`} height={`${25 / 16}rem`} color="warning500" as={EmotionUnhappy} />
         </Tooltip>
     )

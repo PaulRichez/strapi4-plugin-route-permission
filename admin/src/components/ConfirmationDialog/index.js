@@ -25,7 +25,7 @@ const ConfirmationDialog = ({
       onClose={onCancel}
       title={
         header ||
-        formatMessage({ id: getTrad("compontents.confirmation.dialog.header", "Confirmation") })
+        formatMessage({ id: getTrad("components.confirmation.dialog.header", "Confirmation") })
       }
       isOpen={isVisible}
     >
@@ -34,7 +34,7 @@ const ConfirmationDialog = ({
           <Flex justifyContent="center">
             <Typography id="dialog-confirm-description">
               {children ||
-                formatMessage({ id: getTrad("compontents.confirmation.dialog.description"), defaultMessage: "Are you sure you want to continue?" })}
+                formatMessage({ id: getTrad("components.confirmation.dialog.description"), defaultMessage: "Are you sure you want to continue?" })}
             </Typography>
           </Flex>
         </Stack>
@@ -45,7 +45,7 @@ const ConfirmationDialog = ({
             {labelCancel ||
               formatMessage({
                 id: getTrad(
-                  "compontents.confirmation.dialog.button.cancel",
+                  "components.confirmation.dialog.button.cancel",
                   "Cancel"
                 )
               })}
@@ -61,7 +61,7 @@ const ConfirmationDialog = ({
             {labelConfirm ||
               formatMessage({
                 id: getTrad(
-                  "compontents.confirmation.dialog.button.confirm",
+                  "components.confirmation.dialog.button.confirm",
                   "Confirm"
                 )
               })}

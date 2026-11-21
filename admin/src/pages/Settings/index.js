@@ -54,7 +54,7 @@ const Settings = () => {
                     <Stack size={4}>
                         <Stack size={2}>
                             <Typography variant="delta" as="h2">
-                                {formatMessage({ id: getTrad("page.settings.section.restore"), defaultMessage: "Restore routes permisisons history" })}
+                                {formatMessage({ id: getTrad("page.settings.section.restore"), defaultMessage: "Restore routes permissions history" })}
                             </Typography>
                             <Typography variant="pi" as="h4">
                                 {formatMessage({ id: getTrad("page.settings.section.restore.subtitle"), defaultMessage: "Removes the history of the configured routes, on the next restart, the permissions will be reset with your route config" })}
@@ -67,7 +67,7 @@ const Settings = () => {
                                     startIcon={<Refresh />}
                                     onClick={handleRestoreConfirmation}
                                 >
-                                    {formatMessage({ id: getTrad("page.settings.actions.restore"), defaultMessage: "Restore routes permisisons history" })}
+                                    {formatMessage({ id: getTrad("page.settings.actions.restore"), defaultMessage: "Restore routes permissions history" })}
                                 </Button>
 
                                 <ConfirmationDialog
